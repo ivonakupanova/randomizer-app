@@ -1,0 +1,94 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>OTM_sample</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Azure.Monitor.OpenTelemetry.AspNetCore" Version="1.0.0-beta.5" />
+      <PackageReference Include="Azure.Monitor.OpenTelemetry.Exporter" Version="1.0.0-beta.13" />
+      <PackageReference Include="EntityFramework6.Npgsql" Version="6.4.3" />
+      <PackageReference Include="InstantAPIs" Version="0.2.0" />
+      <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.21.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.20" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.20">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.20" />
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.8" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="bin\Debug\net7.0\appsettings.Development.json" />
+      <Content Include="bin\Debug\net7.0\appsettings.json" />
+      <Content Include="bin\Debug\net7.0\Azure.Core.dll" />
+      <Content Include="bin\Debug\net7.0\Azure.Monitor.OpenTelemetry.AspNetCore.dll" />
+      <Content Include="bin\Debug\net7.0\Azure.Monitor.OpenTelemetry.Exporter.dll" />
+      <Content Include="bin\Debug\net7.0\EntityFramework.dll" />
+      <Content Include="bin\Debug\net7.0\EntityFramework.SqlServer.dll" />
+      <Content Include="bin\Debug\net7.0\EntityFramework6.Npgsql.dll" />
+      <Content Include="bin\Debug\net7.0\Humanizer.dll" />
+      <Content Include="bin\Debug\net7.0\InstantAPIs.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.AI.DependencyCollector.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.AI.EventCounterCollector.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.AI.PerfCounterCollector.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.AI.ServerTelemetryChannel.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.AI.WindowsServer.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.ApplicationInsights.AspNetCore.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.ApplicationInsights.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Extensions.Logging.ApplicationInsights.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.OpenApi.dll" />
+      <Content Include="bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll" />
+      <Content Include="bin\Debug\net7.0\Npgsql.dll" />
+      <Content Include="bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll" />
+      <Content Include="bin\Debug\net7.0\OpenTelemetry.Api.dll" />
+      <Content Include="bin\Debug\net7.0\OpenTelemetry.Api.ProviderBuilderExtensions.dll" />
+      <Content Include="bin\Debug\net7.0\OpenTelemetry.dll" />
+      <Content Include="bin\Debug\net7.0\OpenTelemetry.Extensions.Hosting.dll" />
+      <Content Include="bin\Debug\net7.0\OpenTelemetry.Instrumentation.AspNetCore.dll" />
+      <Content Include="bin\Debug\net7.0\OpenTelemetry.Instrumentation.Http.dll" />
+      <Content Include="bin\Debug\net7.0\OpenTelemetry.Instrumentation.SqlClient.dll" />
+      <Content Include="bin\Debug\net7.0\OpenTelemetry.PersistentStorage.Abstractions.dll" />
+      <Content Include="bin\Debug\net7.0\OpenTelemetry.PersistentStorage.FileSystem.dll" />
+      <Content Include="bin\Debug\net7.0\OTM-sample" />
+      <Content Include="bin\Debug\net7.0\OTM-sample.deps.json" />
+      <Content Include="bin\Debug\net7.0\OTM-sample.dll" />
+      <Content Include="bin\Debug\net7.0\OTM-sample.exe" />
+      <Content Include="bin\Debug\net7.0\OTM-sample.pdb" />
+      <Content Include="bin\Debug\net7.0\OTM-sample.runtimeconfig.json" />
+      <Content Include="bin\Debug\net7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+      <Content Include="bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll" />
+      <Content Include="bin\Debug\net7.0\runtimes\win-arm64\native\sni.dll" />
+      <Content Include="bin\Debug\net7.0\runtimes\win-x64\native\sni.dll" />
+      <Content Include="bin\Debug\net7.0\runtimes\win-x86\native\sni.dll" />
+      <Content Include="bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll" />
+      <Content Include="bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+      <Content Include="bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll" />
+      <Content Include="bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll" />
+      <Content Include="bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll" />
+      <Content Include="bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll" />
+      <Content Include="bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll" />
+      <Content Include="bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll" />
+      <Content Include="bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll" />
+      <Content Include="bin\Debug\net7.0\System.CodeDom.dll" />
+      <Content Include="bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll" />
+      <Content Include="bin\Debug\net7.0\System.Data.SqlClient.dll" />
+      <Content Include="bin\Debug\net7.0\System.Diagnostics.PerformanceCounter.dll" />
+      <Content Include="bin\Debug\net7.0\System.Drawing.Common.dll" />
+      <Content Include="bin\Debug\net7.0\System.Memory.Data.dll" />
+      <Content Include="bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll" />
+      <Content Include="bin\Debug\net7.0\System.Security.Permissions.dll" />
+      <Content Include="bin\Debug\net7.0\System.Windows.Extensions.dll" />
+    </ItemGroup>
+
+
+</Project>

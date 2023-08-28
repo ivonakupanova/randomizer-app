@@ -1,0 +1,24 @@
+services:
+  randomizer-db:
+    image: postgres
+    restart: always
+    env_file:
+      - ./env/postgres.env
+    volumes:
+      - postgres-db:/data/postgres
+    ports:
+      - 5432:5432
+        
+  web:
+    image: ivonakupanova/randomizer:latest
+    restart: always
+    env_file:
+      - ./env/web.env
+    depends_on: 
+      - randomizer-db
+    ports:
+      - 5143:80
+      
+volumes:
+  postgres-db:
+    driver: local
