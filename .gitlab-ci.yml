@@ -1,0 +1,27 @@
+stages:          # List of stages for jobs, and their order of execution
+  - build
+  - deploy
+
+.authentication_template:
+    stage: Build
+    before_script:
+    - docker info
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+
+Build API:
+    stage: Build
+    script: docker build -f ./Randomizer-sample/DockerFile -t $DOCKER_REPOSITORY/randomizer:latest
+    when:
+        always
+
+Deploy API:
+    stage: Deploy
+    extends: 
+        - .authentication_template
+    dependencies:
+    - Build API
+    script: docker push $DOCKER_REPOSITORY/randomizer:latest
+
+
+
+
