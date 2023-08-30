@@ -10,6 +10,7 @@ stages:          # List of stages for jobs, and their order of execution
 
 Build API:
     stage: Build
+    tags: windows
     script: docker build -f ./Randomizer-sample/DockerFile -t $DOCKER_REPOSITORY/randomizer:latest
     when:
         always
