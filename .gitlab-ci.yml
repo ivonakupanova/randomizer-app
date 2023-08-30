@@ -18,6 +18,8 @@ Build API:
 
 Deploy API:
     stage: Deploy
+    tags:
+        - windows
     extends: 
         - .authentication_template
     dependencies:
