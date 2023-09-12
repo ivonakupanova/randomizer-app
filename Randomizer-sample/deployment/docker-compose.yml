@@ -1,5 +1,6 @@
 services:
   randomizer-db:
+    container_name: randomizer-db
     image: postgres
     restart: always
     env_file:
