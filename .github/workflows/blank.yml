@@ -25,7 +25,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./Randomizer-sample/Dockerfile
+          file: Randomizer-sample/Dockerfile
           push: true
           tags: ivonakupanova/randomizer-app:latest
           cache-from: type=gha
