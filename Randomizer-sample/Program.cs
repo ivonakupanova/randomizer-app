@@ -12,8 +12,7 @@ builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "The quote of the day!",
-        Description = ""
+        Title = "The quote of the day!"
     });
 });
 builder.Services.AddInstantAPIs(options => options.EnableSwagger = EnableSwagger.Always);
