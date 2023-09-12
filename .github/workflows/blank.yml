@@ -24,8 +24,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: ./Randomizer-sample
-          file: ./Randomizer-sample/Dockerfile
+          context: ./randomizer-app/Randomizer-sample
+          file: ./randomizer-app/Randomizer-sample/Dockerfile
           push: true
           tags: ivonakupanova/randomizer-app:latest
           cache-from: type=gha
