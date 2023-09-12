@@ -7,11 +7,11 @@ public class ApplicationDbContext : Microsoft.EntityFrameworkCore.DbContext
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options) { }
 
-    public DbSet<OtmEntity> Entities { get; set; } = null!;
+    public DbSet<Quote> Quotes { get; set; } = null!;
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-        builder.Entity<OtmEntity>();
+        builder.Entity<Quote>();
 
     }
 }
