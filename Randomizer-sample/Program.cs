@@ -25,7 +25,7 @@ app.MapGet("/api/quote-of-the-day", (ApplicationDbContext dbContext) =>
     if (!dbContext.Quotes.Any()) return Results.NotFound();
     var index = random.Next(0, dbContext.Quotes.Count() - 1);
     var quote = dbContext.Quotes.ToList().ElementAt(index);
-    return Results.Ok("Quote of the day is : " + quote.Text);
+    return Results.Ok(quote.Text);
 
 });
 
